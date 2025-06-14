@@ -180,22 +180,6 @@
       transition: opacity 0.4s ease;
     }
     
-    /* Loading spinner */
-    .spinner {
-      display: inline-block;
-      width: 30px;
-      height: 30px;
-      border: 3px solid rgba(255, 255, 255, 0.3);
-      border-radius: 50%;
-      border-top-color: var(--accent);
-      animation: spin 1s ease-in-out infinite;
-      margin-right: 10px;
-    }
-    
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-    
     /* Controls */
     .controls {
       display: flex;
@@ -312,8 +296,8 @@
     </div>
     
     <div class="quote-content">
-      <div id="quote-text">You're doing better than you think. Keep going.</div>
-      <div id="author">— Swati</div>
+      <div id="quote-text"></div>
+      <div id="author"></div>
     </div>
     
     <div class="controls">
@@ -330,7 +314,7 @@
     </div>
   </div>
 
-  <!-- External script reference -->
+  <!-- External JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>

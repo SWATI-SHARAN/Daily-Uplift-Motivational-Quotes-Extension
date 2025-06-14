@@ -52,14 +52,7 @@ const authorElement = document.getElementById('author');
 const newQuoteBtn = document.getElementById('new-quote');
 const shareBtn = document.getElementById('share');
 
-// Function to get quote of the day
-function getQuoteOfTheDay() {
-  const today = new Date();
-  const dayIndex = today.getDate() % quotes.length;
-  return quotes[dayIndex];
-}
-
-// Function to get random quote
+// Function to get a random quote
 function getRandomQuote() {
   const randomIndex = Math.floor(Math.random() * quotes.length);
   return quotes[randomIndex];
@@ -72,9 +65,9 @@ function displayQuote(quoteObj) {
   authorElement.textContent = `— ${quoteObj.author}`;
 }
 
-// Initial load - set to daily quote
-const dailyQuote = getQuoteOfTheDay();
-displayQuote(dailyQuote);
+// Show a random quote when a new tab is opened
+const randomQuote = getRandomQuote();
+displayQuote(randomQuote);
 
 // New quote button
 newQuoteBtn.addEventListener('click', () => {
